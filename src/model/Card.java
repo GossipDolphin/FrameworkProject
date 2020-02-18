@@ -1,7 +1,6 @@
 package model;
 
 import model.Interfaces.ICard;
-
 import java.awt.*;
 
 public class Card implements ICard {
@@ -9,18 +8,18 @@ public class Card implements ICard {
     private int value;
     private int rank;
     private String color;
-    private Image  jpg_Image;
+    private Image  ImageOfCard;
 
     /**
-     * @param value number on the card 1 - 14 in latin cards. number on the uno card, 0 if special card
+     * @param value number on the card 1 - 14 in latin cards. number on the uno card: 0 if special card
      * @param rank The card type, king, queen etc...
      * @param jpg_Image image of the card
      * @param color color of the card
      */
-    public Card(int value, int rank, Image jpg_Image, String color) {
+    public Card(int value, int rank, String color, Image jpg_Image) {
         this.value = value;
         this.rank = rank;
-        this.jpg_Image = jpg_Image;
+        this.ImageOfCard = jpg_Image;
         this.color = color;
     }
 
@@ -50,11 +49,11 @@ public class Card implements ICard {
     }
 
     public Image getJpg_Image() {
-        return jpg_Image;
+        return ImageOfCard;
     }
 
     public void setJpg_Image(Image jpg_Image) {
-        this.jpg_Image = jpg_Image;
+        this.ImageOfCard = jpg_Image;
     }
     public String getColor() {
         return color;
