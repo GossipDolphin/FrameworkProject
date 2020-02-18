@@ -7,18 +7,21 @@ public class Deck {
 
 
     public String deckName;
-    public ArrayList<Card> DeckTest;
+    public ArrayList<Card> DeckOfCards;
     Random r = new Random();
 
-    public Deck(String deckName, ArrayList<Card> deckTest) {
-        this.deckName = deckName;
-        DeckTest = deckTest;
-    }
+
 
     /**
      * @param deckName Specifies the name of the Deck
-     * @param deck  Arraylist of type Cards which are contained in the deck.
+     * @param deckOfCards  Arraylist of type Cards which are contained in the deck.
      */
+    public Deck(String deckName, ArrayList<Card> deckOfCards) {
+        this.deckName = deckName;
+        DeckOfCards = deckOfCards;
+    }
+
+
 
 
     public Deck() {
@@ -33,19 +36,19 @@ public class Deck {
         this.deckName = deckName;
     }
 
-    public ArrayList<Card> getDeckTest() {
-        return DeckTest;
+    public ArrayList<Card> getDeckOfCards() {
+        return DeckOfCards;
     }
 
-    public void setDeckTest(ArrayList<Card> deckTest) {
-        DeckTest = deckTest;
+    public void setDeckOfCards(ArrayList<Card> deckOfCards) {
+        DeckOfCards = deckOfCards;
     }
 
     @Override
     public String toString() {
         return "Deck{" +
                 "deckName='" + deckName + '\'' +
-                ", DeckTest=" + DeckTest +
+                ", DeckOfCards=" + DeckOfCards +
                 '}';
     }
 
@@ -55,16 +58,16 @@ public class Deck {
     public void generateDeck() {
 
 
-        Deck decks = new Deck("First Deck",DeckTest);
-        this.DeckTest = new ArrayList<>();
+        Deck decks = new Deck("First Deck", DeckOfCards);
+        this.DeckOfCards = new ArrayList<>();
 
         for (int i = 1; i <= 4; i++) {
             for (int j = 1; j <= 13; j++) {
                 String cardImage = "/" + i + "-" + j + "image.jpg";
                 if (i == 1 || i == 3) {
-                    DeckTest.add(new Card(j, i,"Red", cardImage));
+                    DeckOfCards.add(new Card(j, i,"Red", cardImage));
                 } else {
-                    DeckTest.add(new Card(j, i,"Black",cardImage));
+                    DeckOfCards.add(new Card(j, i,"Black",cardImage));
                 }
             }
         }
@@ -77,7 +80,7 @@ public class Deck {
     public void showCards() {
         System.out.println("\n\n Showing Cards !!!");
         int i = 1;
-        for (Card c : DeckTest) {
+        for (Card c : DeckOfCards) {
             System.out.println("Card " + (i++) + " : " + c.toString());
         }
     }
@@ -88,12 +91,12 @@ public class Deck {
     public void shuffle() {
 
         ArrayList<Card> temp = new ArrayList<>();
-        while (!DeckTest.isEmpty()) {
-            int loc = (int) (Math.random() * DeckTest.size());
-            temp.add(DeckTest.get(loc));
-            DeckTest.remove(loc);
+        while (!DeckOfCards.isEmpty()) {
+            int loc = (int) (Math.random() * DeckOfCards.size());
+            temp.add(DeckOfCards.get(loc));
+            DeckOfCards.remove(loc);
         }
-        DeckTest = temp;
+        DeckOfCards = temp;
     }
 
 

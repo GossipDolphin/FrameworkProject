@@ -64,6 +64,10 @@ public class Card implements ICard {
         this.color = color;
     }
 
+    /**
+     * Returns the value of each card in a string format.
+     * @return
+     */
     @Override
     public String toString() {
         return "Card{" +
