@@ -1,4 +1,8 @@
 package model;
 
-public class Card implements IPlayingCard {
+import model.Interfaces.ICard;
+
+public class Card implements ICard {
+
+
 }
