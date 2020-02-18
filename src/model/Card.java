@@ -9,18 +9,18 @@ public class Card implements ICard {
     private int value;
     private int rank;
     private String color;
-    private Image  jpg_Image;
+    private String image;
 
     /**
      * @param value number on the card 1 - 14 in latin cards. number on the uno card, 0 if special card
      * @param rank The card type, king, queen etc...
-     * @param jpg_Image image of the card
+     * @param image image of the card
      * @param color color of the card
      */
-    public Card(int value, int rank, Image jpg_Image, String color) {
+    public Card(int value, int rank, String image, String color) {
         this.value = value;
         this.rank = rank;
-        this.jpg_Image = jpg_Image;
+        this.image = image;
         this.color = color;
     }
 
@@ -49,13 +49,14 @@ public class Card implements ICard {
         this.rank = rank;
     }
 
-    public Image getJpg_Image() {
-        return jpg_Image;
+    public String getImage() {
+        return image;
     }
 
-    public void setJpg_Image(Image jpg_Image) {
-        this.jpg_Image = jpg_Image;
+    public void setImage(String image) {
+        this.image = image;
     }
+
     public String getColor() {
         return color;
     }
