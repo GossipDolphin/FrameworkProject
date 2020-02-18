@@ -1,11 +1,16 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Deck {
 
+    private final int DECK_SIZE = 52;
+    private final int SHUFFLE_EXCHANGES = 2000;
+    private final int HAND_SIZE = 5;
     public String deckName;
     public ArrayList<Card> Deck;
+    Random r = new Random();
 
     /**
      * @param deckName Specifies the name of the Deck
@@ -46,7 +51,7 @@ public class Deck {
 
         for (int i = 1; i < 4; i++) {
             for (int j = 1; j < 13; j++) {
-                String cardImage = "/" +  i + "-" + j + "image.jpg";
+                String cardImage = "/" + i + "-" + j + "image.jpg";
                 if (i == 1 || i == 3) {
                     Card card = new Card(j, i, cardImage, "Red");
                     Deck.add(card);
@@ -57,4 +62,32 @@ public class Deck {
             }
         }
     }
+
+
+    /**
+     * Show All the cards in the deck.
+     */
+    public void showCards() {
+        System.out.println("\n\n Showing Cards !!!");
+        int i = 1;
+        for (Card c : Deck) {
+            System.out.println("Card " + (i++) + " : " + c);
+        }
+    }
+
+    /**
+     * Shuffle the deck by mixing up the order of the cards.
+     */
+    public void shuffle() {
+
+        ArrayList<Card> temp = new ArrayList<>();
+        while (!Deck.isEmpty()) {
+            int loc = (int) (Math.random() * Deck.size());
+            temp.add(Deck.get(loc));
+            Deck.remove(loc);
+        }
+        Deck = temp;
+    }
+
 }
+
