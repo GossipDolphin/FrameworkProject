@@ -6,8 +6,8 @@ import java.awt.*;
 public class StandardPlayingCard extends Card {
 
 
-    public StandardPlayingCard(int value, int rank, String color, Image ImageOfCard){
-        super(value,rank,color,ImageOfCard);
+    public StandardPlayingCard(int value, int rank, String color, String image){
+        super(value,rank,color,image);
     }
 
 

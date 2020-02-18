@@ -64,7 +64,15 @@ public class Card implements ICard {
         this.color = color;
     }
 
-
+    @Override
+    public String toString() {
+        return "Card{" +
+                "value=" + value +
+                ", rank=" + rank +
+                ", color='" + color + '\'' +
+                ", image='" + image + '\'' +
+                '}';
+    }
 }
 
 
