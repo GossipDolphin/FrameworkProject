@@ -11,8 +11,11 @@ public class Deck {
     Random r = new Random();
 
 
-
-        Deck(DeckBuilder builder) {
+    /**
+     *
+     * @param builder Takes in parameter for Deckbuilder consisting of a builder with the name of the deck and the Deck itself.
+     */
+    Deck(DeckBuilder builder) {
         this.deckName = builder.deckName;
         this.DeckOfCards = builder.DeckOfCards;
 

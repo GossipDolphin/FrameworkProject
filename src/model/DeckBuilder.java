@@ -12,17 +12,30 @@ public class DeckBuilder {
     Random r = new Random();
 
 
-
+    /**
+     *
+     * @param deckName Insert the wanted name of the Deck
+     * @return
+     */
     public DeckBuilder Name(String deckName){
         this.deckName = deckName;
         return this;
     }
 
+    /**
+     *
+     * @param DeckOfCards Insert the Arraylist of cards wanted in the deck.
+     * @return
+     */
     public DeckBuilder CardList(ArrayList<Card> DeckOfCards){
         this.DeckOfCards= DeckOfCards;
         return this;
     }
 
+    /**
+     *
+     * @return Auto Generates a Deck of French Cards.
+     */
     public DeckBuilder FrenchDeck(){
 
             Deck FrenchDeck = new DeckBuilder().Name("French Deck").CardList(DeckOfCards).build();
@@ -33,6 +46,10 @@ public class DeckBuilder {
 
         }
 
+    /**
+     *
+     * @return Auto Generates a deck of Italian Cards.
+     */
     public DeckBuilder ItalianDeck(){
 
         Deck ItalianDeck = new DeckBuilder().Name("French Deck").CardList(DeckOfCards).build();
@@ -43,6 +60,10 @@ public class DeckBuilder {
 
     }
 
+    /**
+     *
+     * @return Auto Generates a deck of Swiss Cards.
+     */
     public DeckBuilder SwissDeck(){
 
         Deck SwissDeck = new DeckBuilder().Name("Swiss Deck").CardList(DeckOfCards).build();
@@ -53,6 +74,10 @@ public class DeckBuilder {
 
     }
 
+    /**
+     *
+     * @return Initialize the Build Sequence of a Deck.
+     */
     public Deck build(){
         Deck deck = new Deck(this);
         validateCardObject(deck);
@@ -60,13 +85,17 @@ public class DeckBuilder {
 
     }
 
+    /**
+     *
+     * @param deck Validates the deck PS: need to implement wanted tests.
+     */
     private void validateCardObject(Deck deck){
         //Validation here
     }
 
     /**
      *
-     * @param family Eg. French, Italian, Swiss
+     * @param family Eg. French, Italian, Swiss (Will start generation Process of a Deck.
      */
     public void GenerateCards(String family){
 
