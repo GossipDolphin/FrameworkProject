@@ -11,7 +11,7 @@ public class Player {
     public int gamesWon;
     public int gamesLost;
     public int ranking;
-    public ArrayList<Chip> PlayerChips = new ArrayList<>();
+    public ArrayList<Currency> PlayerChips = new ArrayList<>();
     public ArrayList<Currency> PlayerCurrency = new ArrayList<>();
 
     public ArrayList<Player> playerList = new ArrayList<>();
@@ -28,7 +28,7 @@ public class Player {
      * @param playerChips Amount of Chips player has to spend in games.
      * @param playerCurrency Amount of Cash /currency player has at disposal to buy Chips.
      */
-    public Player(ArrayList<Card> hand, String playerName, int playerNo, int gamesWon, int gamesLost, int ranking, ArrayList<Chip> playerChips, ArrayList<Currency> playerCurrency) {
+    public Player(ArrayList<Card> hand, String playerName, int playerNo, int gamesWon, int gamesLost, int ranking, ArrayList<Currency> playerChips, ArrayList<Currency> playerCurrency) {
         this.hand = hand;
         this.playerName = playerName;
         this.playerNo = playerNo;
@@ -101,11 +101,11 @@ public class Player {
         this.ranking = ranking;
     }
 
-    public ArrayList<Chip> getPlayerChips() {
+    public ArrayList<Currency> getPlayerChips() {
         return PlayerChips;
     }
 
-    public void setPlayerChips(ArrayList<Chip> playerChips) {
+    public void setPlayerChips(ArrayList<Currency> playerChips) {
         PlayerChips = playerChips;
     }
 
