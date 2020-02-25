@@ -90,7 +90,10 @@ public class DeckBuilder {
      * @param deck Validates the deck PS: need to implement wanted tests.
      */
     private void validateCardObject(Deck deck){
-        //Validation here
+        if (deck.getDeckOfCards().size() > 52 || deck.getDeckOfCards().size() < 1){
+            System.out.println("Invalid User input on Deck Size. Must be between 1 and 52");
+        }
+
     }
 
     /**
@@ -103,10 +106,10 @@ public class DeckBuilder {
                 for (int j = 1; j <= 13; j++) {
                     String cardImage = "/" + i + "-" + j + family + "Image.jpg";
                     if (i == 1 || i == 3) {
-                        Card card = new CardBuilder().value(j).rank(i).color("Red").image(cardImage).build();
+                        Card card = new CardBuilder().value(j).suit(i).color("Red").image(cardImage).build();
                         DeckOfCards.add(card);
                     } else {
-                        Card card = new CardBuilder().value(j).rank(i).color("Black").image(cardImage).build();
+                        Card card = new CardBuilder().value(j).suit(i).color("Black").image(cardImage).build();
                         DeckOfCards.add(card);
                     }
                 }

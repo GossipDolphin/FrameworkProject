@@ -1,12 +1,9 @@
 package model;
 
-import model.Interfaces.ICard;
-import java.awt.*;
-
 public class Card {
 
     private final int value;
-    private final int rank;
+    private final int suit;
     private final String color;
     private final String  image;
 
@@ -14,7 +11,7 @@ public class Card {
 
         Card(CardBuilder builder) {
         this.value = builder.value;
-        this.rank = builder.rank;
+        this.suit = builder.suit;
         this.color = builder.color;
         this.image = builder.image;
 
@@ -24,8 +21,8 @@ public class Card {
         return value;
     }
 
-    public int getRank() {
-        return rank;
+    public int getSuit() {
+        return suit;
     }
 
     public String getColor() {
@@ -43,7 +40,7 @@ public class Card {
      */
     @Override
     public String toString() {
-        return "Card: " + this.value + "," + this.rank + "," + this.color +","+this.image +".";
+        return "Card: " + this.value + "," + this.suit + "," + this.color +","+this.image +".";
     }
 }
 

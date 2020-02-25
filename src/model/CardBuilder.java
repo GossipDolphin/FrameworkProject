@@ -1,11 +1,9 @@
 package model;
 
-import model.Card;
-
 public class CardBuilder {
 
     int value;
-    int rank;
+    int suit;
     String color;
     String image;
 
@@ -22,11 +20,11 @@ public class CardBuilder {
 
     /**
      *
-     * @param rank Returns the Rank of a Card in values.
+     * @param suit Returns the Suit rank of a Card in values ranging from 1 to 4 where 1 might be Spades, 2 Harts etc...
      * @return
      */
-    public CardBuilder rank(int rank){
-        this.rank = rank;
+    public CardBuilder suit(int suit){
+        this.suit = suit;
         return this;
     }
 
@@ -62,10 +60,17 @@ public class CardBuilder {
 
     /**
      *
-     * @param card Validates all the parameters entered. PS: Need to be implemented inside validateCardObject() method.
+     * @param card Validates all the parameters entered.
      */
     private void validateCardObject(Card card){
-        //Validation here
+        if (card.getSuit() > 13 || card.getSuit() < 1){
+            System.out.println("Invalid User input on Value. Must be between 1 and 13");
+        }
+        if(card.getSuit() > 4 || card.getSuit() < 1){
+            System.out.println("Invalid User input on Value. Must be between 1 and 13");
+        }
+
+
     }
 
 
