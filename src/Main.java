@@ -5,16 +5,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        /*
-        Deck decker = new Deck();
-
-        decker.generateDeck();
-
-        decker.shuffle();
-
-        decker.showCards();
-
-        */
         System.out.println("before convert");
         Currency dollar = new CurrencyBuilder().name("dollar").rate(0.2).value(9).amount(100).build();
         System.out.println(dollar);
