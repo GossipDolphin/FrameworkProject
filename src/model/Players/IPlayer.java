@@ -1,4 +1,4 @@
-package model.Interfaces;
+package model.Players;
 
 public interface IPlayer {
 }

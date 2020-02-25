@@ -1,5 +1,7 @@
 package model;
 
+import model.Players.Player;
+
 public class Rule extends Player {
 
    /* public void evaluate()
