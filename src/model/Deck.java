@@ -7,7 +7,7 @@ public class Deck {
 
 
     public String deckName;
-    public ArrayList<Card> DeckOfCards;
+    public ArrayList<Card> deckOfCards;
     Random r = new Random();
 
 
@@ -17,7 +17,7 @@ public class Deck {
      */
     Deck(DeckBuilder builder) {
         this.deckName = builder.deckName;
-        this.DeckOfCards = builder.DeckOfCards;
+        this.deckOfCards = builder.deckOfCards;
 
     }
 
@@ -28,7 +28,7 @@ public class Deck {
     }
 
     public ArrayList<Card> getDeckOfCards() {
-        return DeckOfCards;
+        return deckOfCards;
     }
 
 
@@ -36,7 +36,7 @@ public class Deck {
     public String toString() {
         return "Deck{" +
                 "deckName='" + deckName + '\'' +
-                ", DeckOfCards=" + DeckOfCards +
+                ", deckOfCards=" + deckOfCards +
                 '}';
     }
 
@@ -49,7 +49,7 @@ public class Deck {
     public void showCards() {
         System.out.println("\n\n Showing Cards !!!");
         int i = 1;
-        for (Card c : DeckOfCards) {
+        for (Card c : deckOfCards) {
             System.out.println("Card " + (i++) + " : " + c.toString());
         }
     }
@@ -60,12 +60,12 @@ public class Deck {
     public void shuffle() {
 
         ArrayList<Card> temp = new ArrayList<>();
-        while (!DeckOfCards.isEmpty()) {
-            int loc = (int) (Math.random() * DeckOfCards.size());
-            temp.add(DeckOfCards.get(loc));
-            DeckOfCards.remove(loc);
+        while (!deckOfCards.isEmpty()) {
+            int loc = (int) (Math.random() * deckOfCards.size());
+            temp.add(deckOfCards.get(loc));
+            deckOfCards.remove(loc);
         }
-        DeckOfCards = temp;
+        deckOfCards = temp;
     }
 
 

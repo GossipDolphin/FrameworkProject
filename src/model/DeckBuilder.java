@@ -1,15 +1,13 @@
 package model;
 
-import model.Deck;
-
 import java.util.ArrayList;
 import java.util.Random;
 
 public class DeckBuilder {
 
     public String deckName;
-    public ArrayList<Card> DeckOfCards;
-    Random r = new Random();
+    public ArrayList<Card> deckOfCards;
+
 
 
     /**
@@ -28,7 +26,7 @@ public class DeckBuilder {
      * @return
      */
     public DeckBuilder CardList(ArrayList<Card> DeckOfCards){
-        this.DeckOfCards= DeckOfCards;
+        this.deckOfCards = DeckOfCards;
         return this;
     }
 
@@ -38,8 +36,8 @@ public class DeckBuilder {
      */
     public DeckBuilder FrenchDeck(){
 
-            Deck FrenchDeck = new DeckBuilder().Name("French Deck").CardList(DeckOfCards).build();
-            this.DeckOfCards = new ArrayList<>();
+            Deck FrenchDeck = new DeckBuilder().Name("French Deck").CardList(deckOfCards).build();
+            this.deckOfCards = new ArrayList<>();
             GenerateCards("French");
 
             return this;
@@ -48,12 +46,12 @@ public class DeckBuilder {
 
     /**
      *
-     * @return Auto Generates a deck of Italian Cards.
+     * @return Auto Generates a Deck of Italian Cards.
      */
     public DeckBuilder ItalianDeck(){
 
-        Deck ItalianDeck = new DeckBuilder().Name("French Deck").CardList(DeckOfCards).build();
-        this.DeckOfCards = new ArrayList<>();
+        Deck ItalianDeck = new DeckBuilder().Name("French Deck").CardList(deckOfCards).build();
+        this.deckOfCards = new ArrayList<>();
         GenerateCards("Italian");
 
         return this;
@@ -62,12 +60,12 @@ public class DeckBuilder {
 
     /**
      *
-     * @return Auto Generates a deck of Swiss Cards.
+     * @return Auto Generates a Deck of Swiss Cards.
      */
     public DeckBuilder SwissDeck(){
 
-        Deck SwissDeck = new DeckBuilder().Name("Swiss Deck").CardList(DeckOfCards).build();
-        this.DeckOfCards = new ArrayList<>();
+        Deck SwissDeck = new DeckBuilder().Name("Swiss Deck").CardList(deckOfCards).build();
+        this.deckOfCards = new ArrayList<>();
         GenerateCards("Swiss");
 
         return this;
@@ -98,7 +96,7 @@ public class DeckBuilder {
 
     /**
      *
-     * @param family Eg. French, Italian, Swiss (Will start generation Process of a Deck.
+     * @param family Eg. French, Italian, Swiss (Will start generation Process of a Deck)
      */
     public void GenerateCards(String family){
 
@@ -107,10 +105,10 @@ public class DeckBuilder {
                     String cardImage = "/" + i + "-" + j + family + "Image.jpg";
                     if (i == 1 || i == 3) {
                         Card card = new CardBuilder().value(j).suit(i).color("Red").image(cardImage).build();
-                        DeckOfCards.add(card);
+                        deckOfCards.add(card);
                     } else {
                         Card card = new CardBuilder().value(j).suit(i).color("Black").image(cardImage).build();
-                        DeckOfCards.add(card);
+                        deckOfCards.add(card);
                     }
                 }
             }
