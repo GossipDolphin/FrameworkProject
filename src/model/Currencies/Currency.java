@@ -40,6 +40,11 @@ public class Currency implements ICurrency{
         return "Currency: " + "Name: " + this.name + " color: " + this.color + " rate: " + this.rate + " amount: " + this.amount + " value: " + this.value;
     }
 
+    /**
+     * Converts the currencie inwoken on to the currency given ass parameter
+     * @param currency The currency to convert to
+     * @return returns the currencie inwoken on as the currency given
+     */
     @Override
     public Currency convertToAnotherCurrency(Currency currency) {
         this.name = currency.name;

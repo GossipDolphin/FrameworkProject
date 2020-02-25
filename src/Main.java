@@ -10,7 +10,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-
         Deck testDeck = new DeckBuilder().ItalianDeck().build();
         System.out.println(testDeck.toString());
 
@@ -31,9 +30,8 @@ public class Main {
         dollar.convertToAnotherCurrency(new CurrencyBuilder().name("dollar").rate(0.2).value(9).amount(100).build());
         System.out.println(dollar);
 
-        ArrayList ListWithChips = Chip.genreateStandardRateChipSetFromRealCurrency(new CurrencyBuilder().amount(300).rate(5).build());
+        ArrayList<Currency> ListWithChips = Chip.genreateStandardRateChipSetFromRealCurrency(new CurrencyBuilder().amount(300).rate(5).build());
         System.out.println(ListWithChips);
-
 
     }
 }
