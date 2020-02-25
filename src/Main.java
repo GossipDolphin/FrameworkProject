@@ -1,9 +1,6 @@
-import model.Card;
+import model.Currencies.Chip;
+import model.Currencies.Currency;
 import model.Deck;
-
-import java.awt.*;
-import java.awt.image.ImageObserver;
-import java.awt.image.ImageProducer;
 
 public class Main {
 
@@ -16,6 +13,8 @@ public class Main {
         decker.shuffle();
 
         decker.showCards();
+
+        System.out.println(Chip.GenerateChipSet(100, new Currency(5)));
 
     }
 }
