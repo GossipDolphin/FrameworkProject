@@ -10,17 +10,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-
-        Deck testDeck = new DeckBuilder().Name("Testingdecks").ItalianDeck().build();
+        Deck testDeck = new DeckBuilder().ItalianDeck().build();
         System.out.println(testDeck.toString());
 
-        Deck testDeck2 = new DeckBuilder().Name("Testingdecks").FrenchDeck().build();
-        System.out.println(testDeck2.toString());
-
-        Deck testDeck3 = new DeckBuilder().Name("Testingdecks").SwissDeck().build();
-        System.out.println(testDeck3.toString());
-
-        Card testCard = new CardBuilder().value(1).suit(2).color("red").image("/Img.jpg").build();
+        Card testCard = new CardBuilder().value(1).rank(2).color("red").image("/Img.jpg").build();
         System.out.println(testCard.toString());
         System.out.println("before convert");
         Currency dollar = new CurrencyBuilder().name("dollar").rate(0.2).value(9).amount(100).build();
@@ -37,9 +30,8 @@ public class Main {
         dollar.convertToAnotherCurrency(new CurrencyBuilder().name("dollar").rate(0.2).value(9).amount(100).build());
         System.out.println(dollar);
 
-        ArrayList ListWithChips = Chip.genreateStandardRateChipSetFromRealCurrency(new CurrencyBuilder().amount(300).rate(5).build());
+        ArrayList<Currency> ListWithChips = Chip.genreateStandardRateChipSetFromRealCurrency(new CurrencyBuilder().amount(300).rate(5).build());
         System.out.println(ListWithChips);
-
 
     }
 }
