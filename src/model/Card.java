@@ -3,28 +3,22 @@ package model;
 import model.Interfaces.ICard;
 import java.awt.*;
 
-public class Card implements ICard {
+public abstract class Card implements ICard {
 
     private int value;
     private int rank;
     private String color;
     private String  image;
+    private Card card;
 
-    /**
-     * @param value number on the card 1 - 14 in latin cards. number on the uno card: 0 if special card
-     * @param rank The card type, king, queen etc...
-     * @param image image of the card
-     * @param color color of the card
-     */
-    public Card(int value, int rank, String color, String image) {
-        this.value = value;
-        this.rank = rank;
-        this.image = image;
-        this.color = color;
-    }
+
 
     public Card(){
         //empty constructor.
+    }
+
+    public Card getCard(){
+        return card;
     }
 
     @Override
@@ -63,6 +57,18 @@ public class Card implements ICard {
     public void setColor(String color) {
         this.color = color;
     }
+
+    public abstract void buildColor();
+    public abstract void buildRank();
+    public abstract void buildValue();
+    public abstract void buildImage();
+
+
+
+
+
+
+
 
     /**
      * Returns the value of each card in a string format.
