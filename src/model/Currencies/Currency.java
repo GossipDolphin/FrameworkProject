@@ -1,6 +1,6 @@
 package model.Currencies;
 
-public class Currency implements ICurrency{
+public class Currency implements ICurrency {
     private String name;
     private String color;
     private double rate;
@@ -42,16 +42,16 @@ public class Currency implements ICurrency{
 
     /**
      * Converts the currencie inwoken on to the currency given ass parameter
+     *
      * @param currency The currency to convert to
      * @return returns the currencie inwoken on as the currency given
      */
     @Override
-    public Currency convertToAnotherCurrency(Currency currency) {
+    public void convertToAnotherCurrency(Currency currency) {
         this.name = currency.name;
         this.color = currency.color;
         this.rate = currency.rate;
         this.amount = this.amount * currency.rate;
         this.value = currency.value;
-        return this;
     }
 }

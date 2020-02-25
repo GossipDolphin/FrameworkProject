@@ -1,4 +1,4 @@
-package model;
+package model.Cards;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -12,7 +12,6 @@ public class Deck {
 
 
     /**
-     *
      * @param builder Takes in parameter for Deckbuilder consisting of a builder with the name of the deck and the Deck itself.
      */
     Deck(DeckBuilder builder) {
@@ -20,7 +19,6 @@ public class Deck {
         this.deckOfCards = builder.deckOfCards;
 
     }
-
 
 
     public String getDeckName() {
@@ -39,8 +37,6 @@ public class Deck {
                 ", deckOfCards=" + deckOfCards +
                 '}';
     }
-
-
 
 
     /**
@@ -67,13 +63,6 @@ public class Deck {
         }
         deckOfCards = temp;
     }
-
-
-
-
-
-
-
 
 
 }

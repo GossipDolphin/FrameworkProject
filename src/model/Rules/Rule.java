@@ -1,7 +1,7 @@
-package model;
+package model.Rules;
 
 import java.util.ArrayList;
-import model.RuleBuilder;
+
 public class Rule {
 
     private int ruleNo;
@@ -12,8 +12,7 @@ public class Rule {
     private ArrayList<Rule> RuleList = new ArrayList<>();
 
 
-
-    Rule(RuleBuilder builder){
+    Rule(RuleBuilder builder) {
         this.ruleNo = builder.ruleNo;
         this.ruleName = builder.ruleName;
         this.ruleDescription = builder.ruleDescription;

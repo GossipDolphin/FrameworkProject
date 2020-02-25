@@ -1,6 +1,6 @@
 package model.Players;
 
-import model.Card;
+import model.Cards.Card;
 
 import java.util.ArrayList;
 import java.util.Currency;
@@ -25,6 +25,31 @@ public class Player implements IPlayer {
         this.ranking = builder.ranking;
         this.playerChips = builder.playerChips;
         this.playerCurrency = builder.playerCurrency;
+   }
+
+    @Override
+    public ArrayList<Card> showHand() {
+        return null;
+    }
+
+    @Override
+    public void drawCard() {
+
+    }
+
+    @Override
+    public void Quit() {
+
+    }
+
+    @Override
+    public void join() {
+
+    }
+
+   @Override
+   public String toString(){
+       return "Name: " + this.playerName + " Player number: " + this.playerNo + " Ranking: " + this.ranking + " Games Won: " + this.gamesWon + " Games lost: " + this.gamesLost;
    }
 
     public ArrayList<Card> getHand() {

@@ -1,15 +1,14 @@
-package model;
+package model.Cards;
 
 public class Card {
 
     private final int value;
     private final int suit;
     private final String color;
-    private final String  image;
+    private final String image;
 
 
-
-        Card(CardBuilder builder) {
+    Card(CardBuilder builder) {
         this.value = builder.value;
         this.suit = builder.suit;
         this.color = builder.color;
@@ -36,11 +35,12 @@ public class Card {
 
     /**
      * Returns the value of each card in a string format.
+     *
      * @return
      */
     @Override
     public String toString() {
-        return "Card: " + this.value + "," + this.suit + "," + this.color +","+this.image +".";
+        return "Card: " + this.value + "," + this.suit + "," + this.color + "," + this.image + ".";
     }
 }
 

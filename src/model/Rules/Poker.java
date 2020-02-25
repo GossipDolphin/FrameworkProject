@@ -1,8 +1,27 @@
-package model;
+package model.Rules;
 
-import model.Interfaces.IGame;
+import model.Games.IGame;
 
 public class Poker implements IGame {
+    @Override
+    public void start() {
+
+    }
+
+    @Override
+    public void end() {
+
+    }
+
+    @Override
+    public void win() {
+
+    }
+
+    @Override
+    public void draw() {
+
+    }
 
 
      /* public void evaluate()

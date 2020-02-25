@@ -1,5 +1,12 @@
-import model.*;
+import model.Cards.Card;
+import model.Cards.CardBuilder;
+import model.Cards.Deck;
+import model.Cards.DeckBuilder;
 import model.Currencies.*;
+import model.Games.Game;
+import model.Games.GameBuilder;
+import model.Rules.Rule;
+import model.Rules.RuleBuilder;
 
 import java.util.ArrayList;
 
@@ -36,5 +43,7 @@ public class Main {
         ArrayList<Currency> ListWithChips = Chip.genreateStandardRateChipSetFromRealCurrency(new CurrencyBuilder().amount(300).rate(5).build());
         System.out.println(ListWithChips);
 
+        Game game = new GameBuilder().name("poker").innGameCurrencies(ListWithChips).build();
+        System.out.println(game);
     }
 }

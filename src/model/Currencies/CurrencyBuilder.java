@@ -7,32 +7,32 @@ public class CurrencyBuilder {
     double amount;
     double value;
 
-    public CurrencyBuilder name(String name){
+    public CurrencyBuilder name(String name) {
         this.name = name;
         return this;
     }
 
-    public CurrencyBuilder color(String color){
+    public CurrencyBuilder color(String color) {
         this.color = color;
         return this;
     }
 
-    public CurrencyBuilder rate (double rate){
+    public CurrencyBuilder rate(double rate) {
         this.rate = rate;
         return this;
     }
 
-    public CurrencyBuilder amount(double amount){
+    public CurrencyBuilder amount(double amount) {
         this.amount = amount;
         return this;
     }
 
-    public CurrencyBuilder value (double value){
+    public CurrencyBuilder value(double value) {
         this.value = value;
         return this;
     }
 
-    public Currency build(){
+    public Currency build() {
         Currency currency = new Currency(this);
         validateCurrency(currency);
         return currency;

@@ -1,7 +1,6 @@
 package model.Players;
 
-import model.Card;
-
+import model.Cards.Card;
 import java.util.ArrayList;
 import java.util.Currency;
 

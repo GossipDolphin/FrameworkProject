@@ -1,6 +1,6 @@
-package model.Interfaces;
+package model.Cards;
 
-import model.Card;
+import model.Cards.Card;
 
 public interface ICard {
 
