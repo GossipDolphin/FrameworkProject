@@ -9,8 +9,14 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Deck testDeck = new DeckBuilder().ItalianDeck().build();
+        Deck testDeck = new DeckBuilder().Name("Testingdecks").ItalianDeck().build();
         System.out.println(testDeck.toString());
+
+        Deck testDeck2 = new DeckBuilder().Name("Testingdecks").FrenchDeck().build();
+        System.out.println(testDeck2.toString());
+
+        Deck testDeck3 = new DeckBuilder().Name("Testingdecks").SwissDeck().build();
+        System.out.println(testDeck3.toString());
 
         Card testCard = new CardBuilder().value(1).rank(2).color("red").image("/Img.jpg").build();
         System.out.println(testCard.toString());
