@@ -1,20 +1,19 @@
-import model.Currencies.Chip;
+import model.Card;
+import model.CardBuilder;
 import model.Currencies.Currency;
 import model.Deck;
+import model.DeckBuilder;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Deck decker = new Deck();
+        Deck deckTest = new DeckBuilder().FrenchDeck().build();
 
-        decker.generateDeck();
+        Card cardTest = new CardBuilder().value(1).rank(2).color("black").image("/aceOfSpades.jpg").build();
 
-        decker.shuffle();
 
-        decker.showCards();
-
-        System.out.println(Chip.GenerateChipSet(100, new Currency(5)));
+        System.out.println(deckTest);
 
     }
 }
