@@ -1,10 +1,19 @@
+import model.Card;
+import model.CardBuilder;
 import model.Currencies.*;
 import model.Deck;
+import model.DeckBuilder;
 
 public class Main {
 
     public static void main(String[] args) {
 
+
+        Deck testDeck = new DeckBuilder().ItalianDeck().build();
+        System.out.println(testDeck.toString());
+
+        Card testCard = new CardBuilder().value(1).rank(2).color("red").image("/Img.jpg").build();
+        System.out.println(testCard.toString());
         System.out.println("before convert");
         Currency dollar = new CurrencyBuilder().name("dollar").rate(0.2).value(9).amount(100).build();
         System.out.println(dollar);
