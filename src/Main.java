@@ -4,6 +4,8 @@ import model.Currencies.*;
 import model.Deck;
 import model.DeckBuilder;
 
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -34,5 +36,8 @@ public class Main {
         System.out.println("convert back again to dollar");
         dollar.convertToAnotherCurrency(new CurrencyBuilder().name("dollar").rate(0.2).value(9).amount(100).build());
         System.out.println(dollar);
+
+        ArrayList ListWithChips = Chip.genreateStandardRateChipSetFromRealCurrency(new CurrencyBuilder().amount(100).rate(5).build());
+        System.out.println(ListWithChips);
     }
 }
