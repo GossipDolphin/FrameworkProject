@@ -3,71 +3,38 @@ package model;
 import model.Interfaces.ICard;
 import java.awt.*;
 
-public abstract class Card implements ICard {
+public class Card {
 
-    private int value;
-    private int rank;
-    private String color;
-    private String  image;
-    private Card card;
-
+    private final int value;
+    private final int rank;
+    private final String color;
+    private final String  image;
 
 
-    public Card(){
-        //empty constructor.
-    }
 
-    public Card getCard(){
-        return card;
-    }
+        Card(CardBuilder builder) {
+        this.value = builder.value;
+        this.rank = builder.rank;
+        this.color = builder.color;
+        this.image = builder.image;
 
-    @Override
-    public Card show() {
-        return null;
     }
 
     public int getValue() {
         return value;
     }
 
-    public void setValue(int value) {
-        this.value = value;
-    }
-
     public int getRank() {
         return rank;
-    }
-
-    public void setRank(int rank) {
-        this.rank = rank;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
     }
 
     public String getColor() {
         return color;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public String getImage() {
+        return image;
     }
-
-    public abstract void buildColor();
-    public abstract void buildRank();
-    public abstract void buildValue();
-    public abstract void buildImage();
-
-
-
-
-
-
 
 
     /**
@@ -76,12 +43,7 @@ public abstract class Card implements ICard {
      */
     @Override
     public String toString() {
-        return "Card{" +
-                "value=" + value +
-                ", rank=" + rank +
-                ", color='" + color + '\'' +
-                ", image='" + image + '\'' +
-                '}';
+        return "Card: " + this.value + "," + this.rank + "," + this.color +","+this.image +".";
     }
 }
 

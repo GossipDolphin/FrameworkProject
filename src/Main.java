@@ -1,6 +1,6 @@
-import model.Currencies.Chip;
-import model.Currencies.Currency;
+import model.Card;
 import model.Deck;
+import model.CardBuilder;
 
 public class Main {
 
@@ -14,7 +14,9 @@ public class Main {
 
         decker.showCards();
 
-        System.out.println(Chip.GenerateChipSet(100, new Currency(5)));
+        Card cardx = new CardBuilder().value(1).rank(1).color("black").image("/aceOfSpades.jpg").build();
+
+        System.out.println(cardx);
 
     }
 }
