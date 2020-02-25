@@ -10,34 +10,15 @@ public class RuleBuilder {
     public int rulePriority;
 
 
-    public ArrayList<Player> ApplyRuletoPlayerList = new ArrayList<>();
 
-    public int getRuleNo() {
-        return ruleNo;
-    }
 
-    public String getRuleName() {
-        return ruleName;
-    }
-
-    public int getRulePriority() {
-        return rulePriority;
-    }
-
-    public String getRuleDescription() {
-        return ruleDescription;
-    }
-
-    public ArrayList<Player> getApplyRuletoPlayerList() {
-        return ApplyRuletoPlayerList;
-    }
 
     /**
      *
      * @param ruleNo Specify the rule number
      * @return
      */
-    public RuleBuilder RuleNumber(int ruleNo){
+    public RuleBuilder number(int ruleNo){
         this.ruleNo =ruleNo;
         return this;
     }
@@ -47,7 +28,7 @@ public class RuleBuilder {
      * @param ruleName Specify the name of the rule
      * @return
      */
-    public RuleBuilder Name(String ruleName){
+    public RuleBuilder name(String ruleName){
         this.ruleName = ruleName;
         return this;
     }
@@ -57,7 +38,7 @@ public class RuleBuilder {
      * @param rulePriority Specify the priority of the rule ranking from 1-3 where rank 1 will override rank 2 and 3 and so on.
      * @return
      */
-    public RuleBuilder Priority(int rulePriority){
+    public RuleBuilder priority(int rulePriority){
         this.rulePriority = rulePriority;
         return this;
     }
@@ -67,10 +48,12 @@ public class RuleBuilder {
      * @param ruleDescription Specify a rule Description for easier understanding.
      * @return
      */
-    public RuleBuilder Description(String ruleDescription){
+    public RuleBuilder description(String ruleDescription){
         this.ruleDescription = ruleDescription;
         return this;
     }
+
+
 
     /**
      *
