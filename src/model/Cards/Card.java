@@ -2,10 +2,10 @@ package model.Cards;
 
 public class Card {
 
-    private final int value;
-    private final int suit;
-    private final String color;
-    private final String image;
+    private int value;
+    private int suit;
+    private String color;
+    private String image;
 
 
     Card(CardBuilder builder) {
@@ -14,6 +14,16 @@ public class Card {
         this.color = builder.color;
         this.image = builder.image;
 
+    }
+
+    /**
+     * Returns the value of each card in a string format.
+     *
+     * @return
+     */
+    @Override
+    public String toString() {
+        return "Card: " + this.value + "," + this.suit + "," + this.color + "," + this.image + ".";
     }
 
     public int getValue() {
@@ -30,17 +40,6 @@ public class Card {
 
     public String getImage() {
         return image;
-    }
-
-
-    /**
-     * Returns the value of each card in a string format.
-     *
-     * @return
-     */
-    @Override
-    public String toString() {
-        return "Card: " + this.value + "," + this.suit + "," + this.color + "," + this.image + ".";
     }
 }
 

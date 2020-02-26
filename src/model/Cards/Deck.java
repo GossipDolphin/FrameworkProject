@@ -8,8 +8,6 @@ public class Deck {
 
     public String deckName;
     public ArrayList<Card> deckOfCards;
-    Random r = new Random();
-
 
     /**
      * @param builder Takes in parameter for Deckbuilder consisting of a builder with the name of the deck and the Deck itself.
@@ -19,25 +17,6 @@ public class Deck {
         this.deckOfCards = builder.deckOfCards;
 
     }
-
-
-    public String getDeckName() {
-        return deckName;
-    }
-
-    public ArrayList<Card> getDeckOfCards() {
-        return deckOfCards;
-    }
-
-
-    @Override
-    public String toString() {
-        return "Deck{" +
-                "deckName='" + deckName + '\'' +
-                ", deckOfCards=" + deckOfCards +
-                '}';
-    }
-
 
     /**
      * Show All the cards in the deck.
@@ -65,5 +44,20 @@ public class Deck {
     }
 
 
+    @Override
+    public String toString() {
+        return "Deck{" +
+                "deckName='" + deckName + '\'' +
+                ", deckOfCards=" + deckOfCards +
+                '}';
+    }
+
+    String getDeckName() {
+        return deckName;
+    }
+
+    ArrayList<Card> getDeckOfCards() {
+        return deckOfCards;
+    }
 }
 

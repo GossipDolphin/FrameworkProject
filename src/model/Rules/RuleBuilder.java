@@ -2,10 +2,10 @@ package model.Rules;
 
 public class RuleBuilder {
 
-    public int ruleNo;
-    public String ruleName;
-    public String ruleDescription;
-    public int rulePriority;
+    int ruleNo;
+    String ruleName;
+    String ruleDescription;
+    int rulePriority;
 
 
     /**
