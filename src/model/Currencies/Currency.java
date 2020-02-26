@@ -15,6 +15,25 @@ public class Currency implements ICurrency {
         this.value = builder.value;
     }
 
+    /**
+     * Converts the currencie inwoken on to the currency given ass parameter
+     *
+     * @param currency The currency to convert to
+     * @return returns the currencie inwoken on as the currency given
+     */
+    @Override
+    public void convertToAnotherCurrency(Currency currency) {
+        this.name = currency.name;
+        this.color = currency.color;
+        this.rate = currency.rate;
+        this.amount = this.amount * currency.rate;
+        this.value = currency.value;
+    }
+
+    @Override
+    public String toString() {
+        return "Currency: " + "Name: " + this.name + " color: " + this.color + " rate: " + this.rate + " amount: " + this.amount + " value: " + this.value;
+    }
     public String getName() {
         return name;
     }
@@ -33,25 +52,5 @@ public class Currency implements ICurrency {
 
     public double getValue() {
         return value;
-    }
-
-    @Override
-    public String toString() {
-        return "Currency: " + "Name: " + this.name + " color: " + this.color + " rate: " + this.rate + " amount: " + this.amount + " value: " + this.value;
-    }
-
-    /**
-     * Converts the currencie inwoken on to the currency given ass parameter
-     *
-     * @param currency The currency to convert to
-     * @return returns the currencie inwoken on as the currency given
-     */
-    @Override
-    public void convertToAnotherCurrency(Currency currency) {
-        this.name = currency.name;
-        this.color = currency.color;
-        this.rate = currency.rate;
-        this.amount = this.amount * currency.rate;
-        this.value = currency.value;
     }
 }

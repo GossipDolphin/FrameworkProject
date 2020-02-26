@@ -38,6 +38,10 @@ public class CurrencyBuilder {
         return currency;
     }
 
+    /**
+     * Validating correct construction of object
+     * @param currency object up for validation
+     */
     private void validateCurrency(Currency currency) {
         //make validation of the object, not allow random stuff, to be continued
     }

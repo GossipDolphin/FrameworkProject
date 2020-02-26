@@ -1,8 +1,8 @@
 package model.Games;
 
 public interface IGame {
-    public void start();
-    public void end();
-    public void win();
-    public void draw();
+    void start();
+    void end();
+    void win();
+    void draw();
 }

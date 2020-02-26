@@ -14,19 +14,6 @@ public class PlayerBuilder {
     ArrayList<Currency> playerChips;
     Currency playerCurrency;
 
-    public Player build(){
-        Player player = new Player(this);
-        validatePlayer(player);
-        return player;
-    }
-
-    /**
-     * Makes some validation if the Player has been correctly built
-     * @param player player object up for validation
-     */
-    private void validatePlayer(Player player) {
-    }
-
     public PlayerBuilder hand( ArrayList<Card> hand){
         this.hand = hand;
         return this;
@@ -65,5 +52,16 @@ public class PlayerBuilder {
     public PlayerBuilder playerCurrency (Currency playerCurrency){
         this.playerCurrency = playerCurrency;
         return this;
+    }
+    public Player build(){
+        Player player = new Player(this);
+        validatePlayer(player);
+        return player;
+    }
+    /**
+     * Makes some validation if the Player has been correctly built
+     * @param player player object up for validation
+     */
+    private void validatePlayer(Player player) {
     }
 }
