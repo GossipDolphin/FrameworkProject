@@ -20,6 +20,18 @@ public class Rule {
 
     }
 
+
+    @Override
+    public String toString() {
+        return "Rule{" +
+                "ruleNo=" + ruleNo +
+                ", ruleName='" + ruleName + '\'' +
+                ", ruleDescription='" + ruleDescription + '\'' +
+                ", rulePriority=" + rulePriority +
+                ", RuleList=" + RuleList +
+                '}';
+    }
+
     public String getRuleDescription() {
         return ruleDescription;
     }
@@ -39,17 +51,5 @@ public class Rule {
     public ArrayList<Rule> getRuleList() {
         return RuleList;
     }
-
-    @Override
-    public String toString() {
-        return "Rule{" +
-                "ruleNo=" + ruleNo +
-                ", ruleName='" + ruleName + '\'' +
-                ", ruleDescription='" + ruleDescription + '\'' +
-                ", rulePriority=" + rulePriority +
-                ", RuleList=" + RuleList +
-                '}';
-    }
-
 
 }

@@ -1,6 +1,7 @@
 package model.Rules;
 
 import model.Games.IGame;
+import model.Players.Player;
 
 public class Poker implements IGame {
     @Override
@@ -23,8 +24,11 @@ public class Poker implements IGame {
 
     }
 
-
-     /* public void evaluate()
+    /**
+     *
+     * Still under Evaluation and construction. This method is not to be implemented yet
+     * */
+    public void evaluate()
     {
         if (this.royalFlush() == 1)
         {
